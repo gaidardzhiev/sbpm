@@ -1,4 +1,4 @@
-# Source Binary Package Manager (`sbpm.sh`)
+# Source Binary Package Manager
 
 A lightweight, **POSIX compliant shell script package manager** designed for simplicity and portability.  
 `sbpm.sh` manages source based and binary packages with minimal dependencies, requiring only a POSIX compliant shell and `wget`.
