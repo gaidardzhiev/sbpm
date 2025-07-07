@@ -127,3 +127,13 @@ SBPM supports building and managing a comprehensive collection of packages spann
 This broad package coverage demonstrates SBPM’s capability to serve as a one stop solution for building, managing, and deploying software stacks ranging from minimal embedded systems to full featured Linux environments.
 
 For a full list of supported packages and detailed build instructions please read `sbpm.sh`
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit pull requests.
+
+---
+
+## License
+
+This project is licensed under the GPL3 License.
