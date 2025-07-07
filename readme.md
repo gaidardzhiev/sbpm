@@ -47,7 +47,7 @@ Basic commands:
 ## Advanced Capabilities
 Beyond basic source package management, SBPM offers robust support for complex build environments:
 
-- **Cross Architecture Toolchains**  
+- **Cross Compiler Toolchains**  
   SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 
 `./sbpm.sh get-bin cross-compiler`
