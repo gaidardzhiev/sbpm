@@ -48,7 +48,7 @@ Basic commands:
 Beyond basic source package management, SBPM offers robust support for complex build environments:
 
 ### Native Compiler Bootstrapping
-```./sbpm get-bin native-compiler```
+`./sbpm get-bin native-compiler`
 In environments that **do not have a C compiler toolchain preinstalled**, SBPM provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
 
 - A native compiler runs directly on the target system and produces optimized code for that platform.
@@ -57,7 +57,7 @@ In environments that **do not have a C compiler toolchain preinstalled**, SBPM p
 - This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
 
 ### Cross Compiler Toolchains
-```./sbpm.sh get-bin cross-compiler```
+`./sbpm.sh get-bin cross-compiler`
   SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 This command fetches a binary cross compilation toolchain (built from `musl 1.2.5`, `Linux 6.8`, `GCC 11.2.0` and `Binutils 2.33.1`) providing a solid foundation for cross compiling C projects on multiple architectures (`x86`, `x86_64` or `armv7m`)
 
@@ -65,7 +65,7 @@ This command fetches a binary cross compilation toolchain (built from `musl 1.2.
 Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
 
 ### Reproducible Builds Foundation
-By relying solely on a POSIX-compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
+By relying solely on a POSIX compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
 
 
 ## Supported Packages
