@@ -142,7 +142,7 @@ fbuild_src(){
 		oldbox)
 			cd "$SRC"
 			git clone https://github.com/gaidardzhiev/oldbox
-			cd old
+			cd oldbox
 			sed -i 's|/home/src/1v4n/oldbox|/opt/sbpm/src/oldbox|g' oldbox.c
 			./build_toolchain.sh
 			make "$JOBS" && \
@@ -1043,7 +1043,7 @@ fbuild_src(){
 			git clone https://github.com/baskerville/shkd
 			cd shkd
 			sed -i 's/CC *= *gcc/CC = tcc/' Makefile && {
-				sed 's|/usr/local|/opt/spm/bin|g' Makefile;
+				sed 's|/usr/local|/opt/sbpm/bin|g' Makefile;
 				make;
 				make install;
 			}
