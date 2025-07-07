@@ -47,10 +47,20 @@ Basic commands:
 ## Advanced Capabilities
 Beyond basic source package management, SBPM offers robust support for complex build environments:
 
+- **Native Compiler Bootstrapping**  
+In environments that **do not have a C compiler toolchain preinstalled**, SBPM provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
+
+- A native compiler runs directly on the target system and produces optimized code for that platform.
+- Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
+- The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`), enabling the system to compile subsequent packages natively.
+- This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
+
+For example: `./sbpm get-bin native-compiler`
+
 - **Cross Compiler Toolchains**  
   SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 
-`./sbpm.sh get-bin cross-compiler`
+For example: `./sbpm.sh get-bin cross-compiler`
 
 This command fetches a binary cross compilation toolchain built from:
 - musl 1.2.5
