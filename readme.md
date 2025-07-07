@@ -52,7 +52,7 @@ In environments that **do not have a C compiler toolchain preinstalled**, SBPM p
 
 - A native compiler runs directly on the target system and produces optimized code for that platform.
 - Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
-- The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`), enabling the system to compile subsequent packages natively.
+- The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`, `i486`, `x86_64`, `armv8l`, `aarch64` and `mips`), enabling the system to compile subsequent packages natively.
 - This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
 
 For example: `./sbpm get-bin native-compiler`
