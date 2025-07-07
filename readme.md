@@ -45,18 +45,85 @@ Basic commands:
 ```
 
 ## Advanced Capabilities
-
 Beyond basic source package management, SBPM offers robust support for complex build environments:
 
-- **Cross Architecture Toolchains**:  
+- **Cross Architecture Toolchains**  
   SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
-```
-./sbpm.sh get-bin cross-compiler
-```
-This command fetches a binary cross-compilation toolchain built from musl 1.2.5, Linux 6.8, GCC 11.2.0, and Binutils 2.33.1, providing a solid foundation for cross-compiling C projects on multiple architectures.
 
-- **Linux Kernel Compilation**:  
-  Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
+`./sbpm.sh get-bin cross-compiler`
 
-- **Reproducible Builds Foundation**:  
-  By relying solely on a POSIX-compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
+This command fetches a binary cross-compilation toolchain built from:
+- musl 1.2.5
+- Linux 6.8
+- GCC 11.2.0
+- Binutils 2.33.1
+
+providing a solid foundation for cross-compiling C projects on multiple architectures.
+
+- **Linux Kernel Compilation**  
+Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
+
+- **Reproducible Builds Foundation**  
+By relying solely on a POSIX-compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
+
+
+## Supported Packages
+
+SBPM supports building and managing a comprehensive collection of packages spanning compilers, libraries, utilities, networking tools, window managers, and more. This extensive support makes SBPM a versatile tool for developers, system integrators, and embedded systems engineers alike.
+
+### Compiler Toolchains & Languages
+
+- **C Compilers & Toolchains:**  
+  `tcc`, `gcc`, `native-compiler`, `cross-compiler`, `avr-toolchain`, `otcc`, `cc500`, `scc`, `subc`, `cproc`, `c`  
+  Support for multiple C compilers and cross-compilers enables flexible development and cross-platform builds.
+
+- **Standard Libraries:**  
+  `musl`, `glibc`, `dietlibc`, `uclibc`  
+  Multiple C standard libraries allow tailoring builds for size, performance, or compatibility.
+
+- **Other Languages & Tools:**  
+  `go`, `oyacc`, `lambda-delta`, `tmg`  
+  Support for additional languages and parser generators broadens development possibilities.
+
+### Shells & Scripting Utilities
+
+- Shells: `bash`, `dash`, `ash`, `zsh`, `tcsh`  
+- Text processing: `awk`, `grep`, `sed`  
+- Build tools: `make`  
+- Core utilities: `toolbox`, `busybox`, `toybox`  
+- Scripting helpers: `curl`, `wget`, `rsync`, `gzip`, `bzip2`, `xz`, `lzip`, `tar`, `diff`, `bc`
+
+### System & Networking Tools
+
+- Networking & Security: `strongswan`, `nmap`, `john`, `aircrack-ng`, `masscan`, `hping`, `interceptor`, `gnupg`, `iptables`  
+- System utilities: `kmod`, `smartmontools`, `flashrom`, `pcmciautils`, `initramfs`, `mkroot`  
+- Debugging & Development: `gdb`, `pahole`  
+- Filesystem tools: `jfsutils`, `squashfs-tools`
+
+### Window Managers & User Interface
+
+- Window managers: `i3wm`  
+- Launchers & menus: `dmenu`  
+- Terminal multiplexers: `tmux`  
+- Editors: `vim`
+
+### Bootloaders & Firmware
+
+- `grub`, `coreboot`, `flashrom`  
+  Support for bootloader and firmware tools enables low-level system customization and embedded device development.
+
+### Emulators & Virtualization
+
+- `qemu` (listed twice, indicating emphasis)  
+  Support for QEMU allows running and testing software across different architectures and environments.
+
+### Telecommunications & Radio
+
+- `libosmocore`, `libosmo-gprs`, `gapk`, `osmocom-bb`, `esp`, `aboriginal`  
+  Packages focused on mobile communications and radio protocols for specialized development.
+
+---
+
+This broad package coverage demonstrates SBPM’s capability to serve as a one stop solution for building, managing, and deploying software stacks ranging from minimal embedded systems to full featured Linux environments.
+
+For a full list of supported packages and detailed build instructions please read `sbpm.sh`
