@@ -9,8 +9,8 @@ A lightweight, **POSIX compliant shell script package manager** designed for sim
 
 - Written entirely in POSIX shell script for maximum portability
 - No external dependencies except for `wget` and a POSIX shell
-- Simple source based package management: download, build, install, update and delete packages in binary or from source code
-- Minimalist and easy to audit or customize
+- Simple source based package management: download, build, install, update and delete packages
+- Minimalist and easy to audit and customize
 
 ---
 
@@ -50,11 +50,10 @@ Beyond basic source package management, `sbpm.sh` offers robust support for comp
 ### Native Compiler Bootstrapping
 `./sbpm get-bin native-compiler`
 - In environments that **do not have a C compiler toolchain preinstalled**, `sbpm.sh` provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
-
-- A native compiler runs directly on the target system and produces optimized code for that platform.
-- Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
-- The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`, `i486`, `x86_64`, `armv8l`, `aarch64` or `mips`) enabling the system to compile subsequent packages natively.
-- This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
+* A native compiler runs directly on the target system and produces optimized code for that platform.
+* Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
+* The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`, `i486`, `x86_64`, `armv8l`, `aarch64` or `mips`) enabling the system to compile subsequent packages natively.
+* This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
 
 ### Cross Compiler Toolchains
 `./sbpm.sh get-bin cross-compiler`
