@@ -49,7 +49,7 @@ Basic commands:
 Beyond basic source package management, SBPM offers robust support for complex build environments:
 
 - **Cross Architecture Toolchains**:  
-  SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
+  SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware. This command fetches a binary cross-compilation toolchain built from musl 1.2.5, Linux 6.8, GCC 11.2.0, and Binutils 2.33.1, providing a solid foundation for cross-compiling C projects on multiple architectures:
 ```
 ./sbpm.sh get-bin cross-compiler
 ```
