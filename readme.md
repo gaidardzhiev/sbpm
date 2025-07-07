@@ -49,11 +49,7 @@ Beyond basic source package management, `sbpm.sh` offers robust support for comp
 
 ### Native Compiler Bootstrapping
 `./sbpm get-bin native-compiler`
-In environments that **do not have a C compiler toolchain preinstalled**, `sbpm.sh` provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
-* A native compiler runs directly on the target system and produces optimized code for that platform.
-* Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
-* The `native-compiler` function automates downloading and unpacking a prebuilt native C compiler toolchain (for `i686`, `i486`, `x86_64`, `armv8l`, `aarch64` or `mips`) enabling the system to compile subsequent packages natively.
-* This avoids the complex and resource intensive process of building a compiler from scratch on a bare system.
+- In environments that **do not have a C compiler toolchain preinstalled**, `sbpm.sh` provides a critical bootstrapping mechanism via its `native-compiler` function. Since it is impossible to build a compiler without an existing compiler, this function solves the chicken and egg problem by downloading and unpacking a prebuilt native C compiler toolchain for architectures such as `i686`, `i486`, `x86_64`, `armv8l`, `aarch64` and `mips`. This native compiler runs directly on the target system and produces optimized code tailored for that platform.
 
 ### Cross Compiler Toolchains
 `./sbpm.sh get-bin cross-compiler`
