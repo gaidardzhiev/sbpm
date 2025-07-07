@@ -61,10 +61,10 @@ In environments that **do not have a C compiler toolchain preinstalled**, SBPM p
   SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 This command fetches a binary cross compilation toolchain (built from `musl 1.2.5`, `Linux 6.8`, `GCC 11.2.0` and `Binutils 2.33.1`) providing a solid foundation for cross compiling C projects on multiple architectures (`x86`, `x86_64` and `armv7m`)
 
-- **Linux Kernel Compilation**  
+### Linux Kernel Compilation
 Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
 
-- **Reproducible Builds Foundation**  
+### Reproducible Builds Foundation
 By relying solely on a POSIX-compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
 
 
