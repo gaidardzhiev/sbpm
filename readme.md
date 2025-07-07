@@ -29,7 +29,7 @@ Clone the repository and make the script executable:
 git clone https://githum.com/gaidardzhiev/sbpm
 cd sbpm
 chmod +x sbpm.sh
-cp sbpm.sh /usr/bin
+cp sbpm.sh /usr/bin/sbpm.sh
 ```
 
 ## Usage
