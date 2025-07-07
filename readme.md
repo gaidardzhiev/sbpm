@@ -110,7 +110,7 @@ By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the grou
 
 ### Emulators & Virtualization
 
-- `qemu` (listed twice, indicating emphasis)  
+- `qemu` 
   Support for QEMU allows running and testing software across different architectures and environments.
 
 ### Telecommunications & Radio
