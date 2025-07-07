@@ -53,7 +53,7 @@ Beyond basic source package management, `sbpm.sh` offers robust support for comp
 
 ### Cross Compiler Toolchains
 `./sbpm.sh get-bin cross-compiler`
- - `sbpm.sh` can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
+ - `sbpm.sh` can bootstrap and manage binary cross compilation C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 This command fetches a binary cross compilation toolchain (built from `musl 1.2.5`, `Linux 6.8`, `GCC 11.2.0` and `Binutils 2.33.1`) providing a solid foundation for cross compiling C projects on multiple architectures (`x86`, `x86_64` or `armv7m`)
 
 ### Linux Kernel Compilation
