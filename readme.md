@@ -41,5 +41,5 @@ Basic commands:
 ./sbpm.sh build-src <package>
 ./sbpm.sh delete-bin
 ./sbpm.sh delete-src
-./sbpm.sh update-src
+./sbpm.sh update-src <package>
 ``` 
