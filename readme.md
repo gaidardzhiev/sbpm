@@ -1,7 +1,7 @@
 # Source Binary Package Manager (SBPM)
 
 A lightweight, **POSIX compliant shell script package manager** designed for simplicity and portability.  
-SBPM manages source based and binary packages with minimal dependencies, requiring only a POSIX compliant shell and `wget`.
+`sbpm.sh` manages source based and binary packages with minimal dependencies, requiring only a POSIX compliant shell and `wget`.
 
 ---
 
@@ -45,11 +45,11 @@ Basic commands:
 ```
 
 ## Advanced Capabilities
-Beyond basic source package management, SBPM offers robust support for complex build environments:
+Beyond basic source package management, `sbpm.sh` offers robust support for complex build environments:
 
 ### Native Compiler Bootstrapping
 `./sbpm get-bin native-compiler`
-- In environments that **do not have a C compiler toolchain preinstalled**, SBPM provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
+- In environments that **do not have a C compiler toolchain preinstalled**, `sbpm.sh` provides a critical bootstrapping mechanism via its `native-compiler` function. This is essential because:
 
 - A native compiler runs directly on the target system and produces optimized code for that platform.
 - Many minimal or embedded systems start without any compiler installed, making it impossible to build software from source without first obtaining a working compiler.
@@ -58,25 +58,25 @@ Beyond basic source package management, SBPM offers robust support for complex b
 
 ### Cross Compiler Toolchains
 `./sbpm.sh get-bin cross-compiler`
- - SBPM can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
+ - `sbpm.sh` can bootstrap and manage binary C toolchains for a wide array of architectures. This foundation enables building software for diverse platforms, making it a powerful solution for embedded systems development, cross compilation, and maintaining consistent build environments across heterogeneous hardware.
 This command fetches a binary cross compilation toolchain (built from `musl 1.2.5`, `Linux 6.8`, `GCC 11.2.0` and `Binutils 2.33.1`) providing a solid foundation for cross compiling C projects on multiple architectures (`x86`, `x86_64` or `armv7m`)
 
 ### Linux Kernel Compilation
-Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
+Leveraging its toolchain management, `sbpm.sh` is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
 
 ### Reproducible Builds Foundation
-By relying solely on a POSIX compliant shell and `wget`, SBPM lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
+By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the groundwork for highly reproducible builds. This minimalist approach ensures that the build environment itself is transparent and auditable, contributing to supply chain security by enabling verification of the entire build process from source to final binary.
 
 
 ## Supported Packages
 
-SBPM supports building and managing a comprehensive collection of packages spanning compilers, libraries, utilities, networking tools, window managers, and more. This extensive support makes SBPM a versatile tool for developers, system integrators, and embedded systems engineers alike.
+`sbpm.sh` supports building and managing a comprehensive collection of packages, compilers, libraries, utilities, networking tools, window managers, and more. This extensive support makes SBPM a versatile tool for developers, system integrators, and embedded systems engineers alike.
 
 ### Compiler Toolchains & Languages
 
 - **C Compilers & Toolchains:**  
   `tcc`, `gcc`, `native-compiler`, `cross-compiler`, `avr-toolchain`, `otcc`, `cc500`, `scc`, `subc`, `cproc`, `c`, `aboriginal`  
-  Support for multiple C compilers and cross compilers enables flexible development and cross-platform builds.
+  Support for multiple C compilers and cross compilers enables flexible development and cross platform builds.
 
 - **Standard Libraries:**  
   `musl`, `glibc`, `dietlibc`, `uclibc`  
@@ -125,7 +125,7 @@ SBPM supports building and managing a comprehensive collection of packages spann
 
 ---
 
-This broad package coverage demonstrates SBPM’s capability to serve as a one stop solution for building, managing, and deploying software stacks ranging from minimal embedded systems to full featured Linux environments.
+This broad package coverage demonstrates `sbpm.sh` capability to serve as a one stop solution for building, managing, and deploying software stacks ranging from minimal embedded systems to full featured Linux environments.
 
 For a full list of supported packages and detailed build instructions please read `sbpm.sh`
 
