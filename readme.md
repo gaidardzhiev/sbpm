@@ -1,7 +1,7 @@
 # Source Binary Package Manager (SBPM)
 
 A lightweight, **POSIX-compliant shell script package manager** designed for simplicity and portability.  
-SBPM manages source-based packages with minimal dependencies, requiring only a POSIX-compliant shell and `wget`.
+SBPM manages source based and binary packages with minimal dependencies, requiring only a POSIX compliant shell and `wget`.
 
 ---
 
@@ -9,7 +9,7 @@ SBPM manages source-based packages with minimal dependencies, requiring only a P
 
 - Written entirely in POSIX shell script for maximum portability
 - No external dependencies except for `wget` and a POSIX shell
-- Simple source based package management: download, build, install and update packages from source or binary
+- Simple source based package management: download, build, install, update and delete packages in binary or from source code
 - Minimalist and easy to audit or customize
 
 ---
@@ -23,7 +23,7 @@ SBPM manages source-based packages with minimal dependencies, requiring only a P
 
 ## Installation
 
-Clone or download the repository and make the main script executable:
+Clone the repository and make the script executable:
 
 ```
 git clone https://githum.com/gaidardzhiev/sbpm
@@ -36,3 +36,10 @@ cp sbpm.sh /usr/bin
 
 Basic commands:
 
+```
+./sbpm.sh get-bin <package>
+./sbpm.sh build-src <package>
+./sbpm.sh delete-bin
+./sbpm.sh delete-src
+./sbpm.sh update-src
+``` 
