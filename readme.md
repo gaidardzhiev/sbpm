@@ -9,7 +9,7 @@ A lightweight, **POSIX compliant shell script package manager** designed for sim
 
 - Written entirely in POSIX shell script for maximum portability
 - No external dependencies except for `wget` and a POSIX shell
-- Simple source based package management: download, build, install, update and delete packages
+- Simple source based and binary package management: download, build, install, update and delete packages
 - Minimalist and easy to audit and customize
 
 ---
