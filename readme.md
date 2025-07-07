@@ -1,6 +1,6 @@
 # Source Binary Package Manager (SBPM)
 
-A lightweight, **POSIX-compliant shell script package manager** designed for simplicity and portability.  
+A lightweight, **POSIX compliant shell script package manager** designed for simplicity and portability.  
 SBPM manages source based and binary packages with minimal dependencies, requiring only a POSIX compliant shell and `wget`.
 
 ---
@@ -52,13 +52,13 @@ Beyond basic source package management, SBPM offers robust support for complex b
 
 `./sbpm.sh get-bin cross-compiler`
 
-This command fetches a binary cross-compilation toolchain built from:
+This command fetches a binary cross compilation toolchain built from:
 - musl 1.2.5
 - Linux 6.8
 - GCC 11.2.0
 - Binutils 2.33.1
 
-providing a solid foundation for cross-compiling C projects on multiple architectures.
+providing a solid foundation for cross compiling C projects on multiple architectures.
 
 - **Linux Kernel Compilation**  
 Leveraging its toolchain management, SBPM is capable of building the Linux kernel from source. This demonstrates its ability to handle large, intricate projects with specific compilation requirements, providing a streamlined process for kernel development and customization.
@@ -74,8 +74,8 @@ SBPM supports building and managing a comprehensive collection of packages spann
 ### Compiler Toolchains & Languages
 
 - **C Compilers & Toolchains:**  
-  `tcc`, `gcc`, `native-compiler`, `cross-compiler`, `avr-toolchain`, `otcc`, `cc500`, `scc`, `subc`, `cproc`, `c`  
-  Support for multiple C compilers and cross-compilers enables flexible development and cross-platform builds.
+  `tcc`, `gcc`, `native-compiler`, `cross-compiler`, `avr-toolchain`, `otcc`, `cc500`, `scc`, `subc`, `cproc`, `c`, `aboriginal`  
+  Support for multiple C compilers and cross compilers enables flexible development and cross-platform builds.
 
 - **Standard Libraries:**  
   `musl`, `glibc`, `dietlibc`, `uclibc`  
@@ -91,7 +91,7 @@ SBPM supports building and managing a comprehensive collection of packages spann
 - Text processing: `awk`, `grep`, `sed`  
 - Build tools: `make`  
 - Core utilities: `toolbox`, `busybox`, `toybox`  
-- Scripting helpers: `curl`, `wget`, `rsync`, `gzip`, `bzip2`, `xz`, `lzip`, `tar`, `diff`, `bc`
+- Tools: `curl`, `wget`, `rsync`, `gzip`, `bzip2`, `xz`, `lzip`, `tar`, `diff`, `bc`
 
 ### System & Networking Tools
 
@@ -110,7 +110,7 @@ SBPM supports building and managing a comprehensive collection of packages spann
 ### Bootloaders & Firmware
 
 - `grub`, `coreboot`, `flashrom`  
-  Support for bootloader and firmware tools enables low-level system customization and embedded device development.
+  Support for bootloader and firmware tools enables low level system customization and embedded device development.
 
 ### Emulators & Virtualization
 
@@ -119,7 +119,7 @@ SBPM supports building and managing a comprehensive collection of packages spann
 
 ### Telecommunications & Radio
 
-- `libosmocore`, `libosmo-gprs`, `gapk`, `osmocom-bb`, `esp`, `aboriginal`  
+- `libosmocore`, `libosmo-gprs`, `gapk`, `osmocom-bb`, `esp` 
   Packages focused on mobile communications and radio protocols for specialized development.
 
 ---
