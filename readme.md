@@ -120,7 +120,7 @@ By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the grou
 
 ### Microcontroller Toolchains
 
-- `esp`, `avr-toolchain`
+- `esp-toolchain`, `avr-toolchain`
  Complete set of software tools including compilers, linkers, debuggers, and libraries needed to build, debug, and deploy firmware tailored to specific microcontroller architectures.
  
 ---
