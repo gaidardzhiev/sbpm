@@ -1209,7 +1209,7 @@ fbin() {
 					;;
 			esac
 			;;
-		esp)
+		esp-toolchain)
 			case "$TARGET" in
 				x86_64)
 					cd /opt
