@@ -115,9 +115,14 @@ By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the grou
 
 ### Telecommunications & Radio
 
-- `libosmocore`, `libosmo-gprs`, `gapk`, `osmocom-bb`, `esp` 
+- `libosmocore`, `libosmo-gprs`, `gapk`, `osmocom-bb` 
   Packages focused on mobile communications and radio protocols for specialized development.
 
+### Microcontroller Toolchains
+
+- `esp`, `avr-toolchain`
+ Complete set of software tools including compilers, linkers, debuggers, and libraries needed to build, debug, and deploy firmware tailored to specific microcontroller architectures.
+ 
 ---
 
 This broad package coverage demonstrates `sbpm.sh` capability to serve as a one stop solution for building, managing, and deploying software stacks ranging from minimal embedded systems to full featured Linux environments.
