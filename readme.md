@@ -86,7 +86,7 @@ By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the grou
 - Shells: `bash`, `dash`, `ash`, `zsh`, `tcsh`  
 - Text processing: `awk`, `grep`, `sed`  
 - Build tools: `make`  
-- Core utilities: `toolbox`, `busybox`, `toybox`, `oldbox`  
+- Core utilities: `busybox`, `toybox`, `oldbox`, `toolbox`
 - Tools: `curl`, `wget`, `rsync`, `gzip`, `bzip2`, `xz`, `lzip`, `tar`, `diff`, `bc`
 
 ### System & Networking Tools
