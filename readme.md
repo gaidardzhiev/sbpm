@@ -133,8 +133,6 @@ For a full list of supported packages and detailed build instructions please rea
 
 Contributions are welcome! Please fork the repository and submit pull requests.
 
----
-
 ## License
 
 This project is licensed under the GPL3 License.
