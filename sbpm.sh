@@ -46,6 +46,7 @@ GZIP="1.13"
 LINUX="6.13.1"
 DIFF="3.11"
 TCSH="6.24.15"
+SHELLCHECK="0.10.0"
 
 fusage() {
 	printf "usage: $0 <operation> <package>\n"
@@ -54,7 +55,7 @@ fusage() {
 	printf "		< build-src | get-bin | delete-src | delete-bin | update-src >\n"
 	printf "\n"
 	printf "packages:\n"
-	printf "		< tcc | gcc | make | musl | glibc | mc | git | strongswan | dietlibc | zsh | bash | dash | ash | linux-kernel | awk | grep | sed | oldbox | busybox | toybox | qbe | curl | wget | tmux | qemu | i3wm | dmenu | grub | coreboot | flashrom | cross-compiler | uclibc | john | nmap | lambda-delta | tmg | subc | cc500 | scc | c | cproc | 9base | airgeddon | masscan | kexec | otcc | hping | esp-toolchain | aboriginal | interceptor | gnupg | go | oyacc | libosmocore | libosmo-gprs | gapk | osmocom-bb | aircrack-ng | smartmontools | gdb | kmod | gzip | rsync | xz | bc | lzip | pahole | tar | bzip2 | initramfs | vim | native-compiler | mkroot | avr-toolchain | diff | tcsh | jfsutils | squashfs-tools | iptables | pcmciautils | shkd | toolbox >\n"
+	printf "		< tcc | gcc | make | musl | glibc | mc | git | strongswan | dietlibc | zsh | bash | dash | ash | linux-kernel | awk | grep | sed | oldbox | busybox | toybox | qbe | curl | wget | tmux | qemu | i3wm | dmenu | grub | coreboot | flashrom | cross-compiler | uclibc | john | nmap | lambda-delta | tmg | subc | cc500 | scc | c | cproc | 9base | airgeddon | masscan | kexec | otcc | hping | esp-toolchain | aboriginal | interceptor | gnupg | go | oyacc | libosmocore | libosmo-gprs | gapk | osmocom-bb | aircrack-ng | smartmontools | gdb | kmod | gzip | rsync | xz | bc | lzip | pahole | tar | bzip2 | initramfs | vim | native-compiler | mkroot | avr-toolchain | diff | tcsh | jfsutils | squashfs-tools | iptables | pcmciautils | shkd | toolbox | shellcheck >\n"
 	exit 1
 }
 
@@ -1331,6 +1332,16 @@ fbin() {
 					printf "unsupported architecture: '$TARGET'\n";
 					exit 1;
 				}
+			;;
+		shellcheck)
+			cd "$BIN"
+			ARCH="$TARGET"
+			[ "$TARGET" = "armv8l" ] && ARCH="armv6hf"
+			wget https://github.com/koalaman/shellcheck/releases/download/v"$SHELLCHECK"/shellcheck-v"$SHELLCHECK".linux."$ARCH".tar.xz
+			tar xfv shellcheck-v"$SHELLCHECK".linux."$ARCH".tar.xz
+			rm shellcheck-v"$SHELLCHECK".linux."$ARCH".tar.xz
+			mv shellcheck-v"$SHELLCHECK"/shellcheck "$BIN"/shellcheck-"$ARCH"
+			rm -r shellcheck-v"$SHELLCHECK"
 			;;
 		*)
 			printf "unsupported package: %s\n" "$GET"

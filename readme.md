@@ -93,7 +93,7 @@ By relying solely on a POSIX compliant shell and `wget`, `sbpm.sh` lays the grou
 
 - Networking & Security: `strongswan`, `nmap`, `john`, `aircrack-ng`, `masscan`, `hping`, `interceptor`, `gnupg`, `iptables`  
 - System utilities: `kmod`, `smartmontools`, `flashrom`, `pcmciautils`, `initramfs`, `mkroot`  
-- Debugging & Development: `gdb`, `pahole`  
+- Debugging & Development: `gdb`, `pahole`, `shellcheck`
 - Filesystem tools: `jfsutils`, `squashfs-tools`
 
 ### Window Managers & User Interface
