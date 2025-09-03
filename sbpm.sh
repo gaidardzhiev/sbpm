@@ -47,6 +47,7 @@ LINUX="6.13.1"
 DIFF="3.11"
 TCSH="6.24.15"
 SHELLCHECK="0.10.0"
+STRACE="5.14"
 
 fusage() {
 	printf "usage: $0 <operation> <package>\n"
@@ -55,7 +56,7 @@ fusage() {
 	printf "		 build-src | get-bin | delete-src | delete-bin | update-src\n"
 	printf "\n"
 	printf "packages:\n"
-	printf "		 tcc | gcc | make | musl | glibc | mc | git | strongswan | dietlibc | zsh | bash | dash | ash | linux-kernel | awk | grep | sed | oldbox | busybox | toybox | qbe | curl | wget | tmux | qemu | i3wm | dmenu | grub | coreboot | flashrom | cross-compiler | uclibc | john | nmap | lambda-delta | tmg | subc | cc500 | scc | c | cproc | 9base | airgeddon | masscan | kexec | otcc | hping | esp-toolchain | aboriginal | interceptor | gnupg | go | oyacc | libosmocore | libosmo-gprs | gapk | osmocom-bb | aircrack-ng | smartmontools | gdb | kmod | gzip | rsync | xz | bc | lzip | pahole | tar | bzip2 | initramfs | vim | native-compiler | mkroot | avr-toolchain | diff | tcsh | jfsutils | squashfs-tools | iptables | pcmciautils | shkd | toolbox | shellcheck | getprand | lamma_cpp\n"
+	printf "		 tcc | gcc | make | musl | glibc | mc | git | strongswan | dietlibc | zsh | bash | dash | ash | linux-kernel | awk | grep | sed | oldbox | busybox | toybox | qbe | curl | wget | tmux | qemu | i3wm | dmenu | grub | coreboot | flashrom | cross-compiler | uclibc | john | nmap | lambda-delta | tmg | subc | cc500 | scc | c | cproc | 9base | airgeddon | masscan | kexec | otcc | hping | esp-toolchain | aboriginal | interceptor | gnupg | go | oyacc | libosmocore | libosmo-gprs | gapk | osmocom-bb | aircrack-ng | smartmontools | gdb | kmod | gzip | rsync | xz | bc | lzip | pahole | tar | bzip2 | initramfs | vim | native-compiler | mkroot | avr-toolchain | diff | tcsh | jfsutils | squashfs-tools | iptables | pcmciautils | shkd | toolbox | shellcheck | getprand | lamma_cpp | strace\n"
 	exit 1
 }
 
@@ -1104,6 +1105,16 @@ fbuild_src(){
 				./configure && \
 				make "$JOBS" && \
 				cp tmux "$BIN"/tmux-"$TARGET"
+			;;
+		strace)
+			cd "$SRC"
+			wget https://github.com/strace/strace/releases/download/v"$STRACE"/strace-"$STRACE".tar.xz
+			tar xfv wget strace-"$STRACE".tar.xz
+			rm strace-"$STRACE".tar.xz
+			cd strace-"$STRACE"
+			./configure && \
+				make "$JOBS"
+				cp strace "$BIN"/strace"$TARGET"
 			;;
 		*)
 			printf "unsupported package: %s\n\n" "$PKG"
